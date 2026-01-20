@@ -127,7 +127,7 @@ int main(int argc, char* argv[]){
 }
 
 void timer_handler(int sig){
-  if(system("notify-send 'Timer Finished!' 'Your countdown timer has completed.' --icon=/home/asephan/Projects/timer/stopwatch.png -u normal")){ //change icon location to its absoluute path
+  if(system("notify-send 'Timer Finished!' 'Your countdown timer has completed.' --icon=$XDG_HOME/Projects/timer/stopwatch.png -u normal")){ //change icon location to its absoluute path
     perror("system");
     exit(1);
   }
